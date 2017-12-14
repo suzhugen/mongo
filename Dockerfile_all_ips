@@ -25,7 +25,7 @@ WORKDIR /data
 COPY mongod-all-ips.conf  /etc/mongod.conf
 
 # Define default command.
-CMD ["mongod --auth"]
+CMD []
 
 # Expose ports.
 #   - 27017: process
