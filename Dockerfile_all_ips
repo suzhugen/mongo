@@ -1,11 +1,11 @@
 #
 # MongoDB Dockerfile
 #
-# https://github.com/dockerfile/mongodb
+# https://github.com/suzhugen/mongo
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install MongoDB.
 RUN \
