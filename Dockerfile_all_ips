@@ -10,6 +10,12 @@ FROM debian:jessie-slim
 
 # Install MongoDB.
 
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends \
+		ca-certificates \
+		jq \
+		numactl \
+	&& rm -rf /var/lib/apt/lists/*
 
 RUN echo "deb  https://repo.mongodb.org/apt/debian jessie//mongodb-org/3.6 main" |  tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 
