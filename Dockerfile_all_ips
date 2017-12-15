@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM ubuntu
+FROM ubuntu:xenial
 
 # Install MongoDB.
 # Allow build-time overrides (eg. to build image with MongoDB Enterprise version)
@@ -19,7 +19,7 @@ ENV MONGO_PACKAGE=${MONGO_PACKAGE} MONGO_REPO=${MONGO_REPO}
 ENV MONGO_MAJOR 3.6
 ENV MONGO_VERSION 3.6.0
 
-RUN echo "deb http://$MONGO_REPO/apt/ubuntu jessie/${MONGO_PACKAGE%-unstable}/$MONGO_MAJOR main" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
+RUN echo "deb http://$MONGO_REPO/apt/ubuntu/xenial/mongodb-org/3.6/Release" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
 
 
 RUN \
