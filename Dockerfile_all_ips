@@ -15,7 +15,8 @@ RUN apt-get update \
 		ca-certificates \
 		jq \
 		numactl \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+    && apt-get install apt-transport-https
 
 RUN echo "deb  https://repo.mongodb.org/apt/debian jessie//mongodb-org/3.6 main" |  tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 
