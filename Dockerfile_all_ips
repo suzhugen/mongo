@@ -19,7 +19,7 @@ ENV MONGO_PACKAGE=${MONGO_PACKAGE} MONGO_REPO=${MONGO_REPO}
 ENV MONGO_MAJOR 3.6
 ENV MONGO_VERSION 3.6.0
 
-RUN echo "deb http://$MONGO_REPO/apt/ubuntu/xenial/mongodb-org/3.6/Release" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
+RUN echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse | tee /etc/apt/sources.list.d/mongodb-org-3.6.list"
 
 
 RUN \
