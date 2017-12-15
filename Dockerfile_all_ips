@@ -17,7 +17,7 @@ RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mo
 
 RUN \
   apt-get update  \
-  && apt-get install -y mongodb-org=3.5.0  \
+  && apt-get install -y mongodb-org \
   && rm -rf /var/lib/apt/lists/*
 
 # Define mountable directories.
